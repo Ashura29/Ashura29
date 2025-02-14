@@ -42,6 +42,6 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/Ashura29/Ashura29/output/snake.svg" alt="Snake animation" />
+<img src="[https://raw.githubusercontent.com/Ashura29/Ashura29/output/snake.svg" alt="Snake animation](https://codepen.io/enesser/pen/BZQWBo)" />
 
 ###
