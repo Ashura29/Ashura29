@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+    <!-- Background with a darker cyberpunk feel -->
+    <rect width="800" height="200" fill="#0a0a15"/>
+    
+    <!-- Add subtle grid effect -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff10" stroke-width="0.5"/>
+    </pattern>
+    <rect width="800" height="200" fill="url(#grid)"/>
+    
+    <!-- Typing cursor with cyberpunk glow -->
+    <rect id="cursor" x="20" y="40" width="2" height="16" fill="#0ff">
+        <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Code content -->
+    <g font-family="monospace" font-size="14" filter="url(#neon)">
+        <!-- Add neon glow effect -->
+        <defs>
+            <filter id="neon" x="-10%" y="-10%" width="120%" height="120%">
+                <feGaussianBlur stdDeviation="1" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <!-- First line: class declaration -->
+        <text>
+            <tspan x="20" y="50" fill="#ff00ff">class</tspan>
+        </text>
+        <text>
+            <tspan x="65" y="50" fill="#00ff9f">FullstackDev</tspan>
+        </text>
+        <text>
+            <tspan x="160" y="50" fill="#0ff">{</tspan>
+        </text>
+
+        <!-- Second line: constructor -->
+        <text>
+            <tspan x="40" y="80" fill="#ff00ff">constructor</tspan>
+        </text>
+        <text>
+            <tspan x="130" y="80" fill="#0ff">()</tspan>
+        </text>
+        <text>
+            <tspan x="145" y="80" fill="#0ff">{</tspan>
+        </text>
+
+        <!-- Third line: name property -->
+        <text>
+            <tspan x="60" y="110" fill="#ff00ff">this</tspan>
+        </text>
+        <text>
+            <tspan x="90" y="110" fill="#0ff">.</tspan>
+        </text>
+        <text>
+            <tspan x="100" y="110" fill="#f0f">name</tspan>
+        </text>
+        <text>
+            <tspan x="135" y="110" fill="#0ff">=</tspan>
+        </text>
+        <text>
+            <tspan x="150" y="110" fill="#00ff9f">'Ahmed'</tspan>
+        </text>
+        <text>
+            <tspan x="210" y="110" fill="#0ff">;</tspan>
+        </text>
+
+        <!-- Fourth line: introduction method -->
+        <text>
+            <tspan x="60" y="140" fill="#ff00ff">console</tspan>
+        </text>
+        <text>
+            <tspan x="120" y="140" fill="#0ff">.</tspan>
+        </text>
+        <text>
+            <tspan x="130" y="140" fill="#00ff9f">log</tspan>
+        </text>
+        <text>
+            <tspan x="155" y="140" fill="#0ff">(</tspan>
+        </text>
+        <text>
+            <tspan x="165" y="140" fill="#00ff9f">`Hi, I'm a Fullstack student`</tspan>
+        </text>
+        <text>
+            <tspan x="380" y="140" fill="#0ff">);</tspan>
+        </text>
+
+        <!-- Fifth line: closing braces -->
+        <text>
+            <tspan x="40" y="170" fill="#0ff">}</tspan>
+        </text>
+        <text>
+            <tspan x="20" y="190" fill="#0ff">}</tspan>
+        </text>
+    </g>
+
+    <!-- Individual letter animations -->
+    <script type="text/javascript"><![CDATA[
+        document.querySelectorAll('text').forEach((textElement, index) => {
+            const delay = index * 100;
+            textElement.style.opacity = 0;
+            textElement.innerHTML.split('').forEach((char, charIndex) => {
+                setTimeout(() => {
+                    textElement.style.opacity = 1;
+                }, delay + (charIndex * 50));
+            });
+        });
+    ]]></script>
+
+    <!-- Cursor animation -->
+    <animate 
+        xlink:href="#cursor"
+        attributeName="x"
+        values="20;65;160;40;130;145;60;90;100;135;150;210;60;120;130;155;165;380;40;20"
+        keyTimes="0;0.05;0.1;0.15;0.2;0.25;0.3;0.35;0.4;0.45;0.5;0.55;0.6;0.65;0.7;0.75;0.8;0.85;0.9;1"
+        dur="8s"
+        repeatCount="indefinite"/>
+    <animate 
+        xlink:href="#cursor"
+        attributeName="y"
+        values="40;40;40;70;70;70;100;100;100;100;100;100;130;130;130;130;130;130;160;180"
+        keyTimes="0;0.05;0.1;0.15;0.2;0.25;0.3;0.35;0.4;0.45;0.5;0.55;0.6;0.65;0.7;0.75;0.8;0.85;0.9;1"
+        dur="8s"
+        repeatCount="indefinite"/>
+</svg>
