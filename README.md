@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is {Ahmed Navarro} 👺 and I'm a (FullStack Developer Student)🧑🏼‍🎓from [Costa Rica] 🌎</h2>
+<h2 align="left">Hi 👋! My name is {Ahmed Navarro} 👺 and I'm a (FullStack Development Student)🧑🏼‍🎓from [Costa Rica] 🌎</h2>
 
 ###
 
